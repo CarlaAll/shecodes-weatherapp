@@ -1,20 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Weather App</title>
-    <style link rel="stylesheet" href="src/styles.css"></style>
-  </head>
-  <body>
-    <h1>
-      This is a weather app
-    </h1>
-    <img
-      src="images/takealong_parajut.png"
-      alt="woman with parajut"
-      width="300"
-    />
-    <script src="src/script.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🌥 Carla's Weather App ☀️</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="src/styles.css" />
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="https://kit.fontawesome.com/c9e2672f04.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="container">
+    <div class="weatherApp">
+      <div class="form-row clearfix search">
+        <div class="input-group-append col-9 float-left">
+          <div class="input-group flex-nowrap">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="addon-wrapping"><i class="fas fa-map-marker-alt"></i></span>
+            </div>
+            <input type="text" class="form-control" placeholder="Type another city..." aria-label="City"
+              aria-describedby="addon-wrapping" autofocus="on" id="city-input" />
+          </div>
+          <div class="col-1 float-left">
+            <button type="button" class="btn btn-primary w-200" id="searching">
+              Search
+            </button>
+            </br>
+            <button type="button" class="btn btn-success w-200" id="btn-location">
+              current
+            </button>
+          </div>
+          <div class="col-1 float-left">
+            <span class="emoji-search">🌥</span>
+          </div>
+        </div>
+      </div>
+      <div class="row temperature-row">
+        <div class="col-6">
+          <span class="temperature" id="temp"></span>
+          <span class="unites">°C | <a href="changeFahrenheit" id="Fahrenheit">°F</a></span>
+          <br />
+          <ul>
+            <li class="temperatureNowInfoDate" , id="current-date">
+              Day, Month Date, FullYear
+            </li>
+
+            <li class="temperatureNowInfoTime" id="current-time">00.00</li>
+            <li class="temperatureNowInfoLocation" id="current-location"></li>
+          </ul>
+        </div>
+        <div class="col-6">
+          <img src="images/takealong_sun.png" alt="woman riding a bicycle" class="temperatureNowImage" />
+        </div>
+      </div>
+
+      <div class="row weekDaysOverview">
+        <div class="col-2 weekDays"><strong>today</strong></div>
+        <div class="col-2 weekDays" id="tomorrow">Day+1</div>
+        <div class="col-2 weekDays" id="after-tomorrow">Day+2</div>
+        <div class="col-2 weekDays" id="in-three">Day+3</div>
+        <div class="col-2 weekDays" id="in-four">Day+4</div>
+        <div class="col-2 weekDays" id="in-five">Day+5</div>
+      </div>
+      <div class="card-deck">
+        <div class="card">
+          <div class="card-body forecast">
+            <p class="card-text forecast"><strong>11:00</strong></p>
+            <p class="card-text forecast">
+              <small class="text-muted">☀️</small>
+            </p>
+            <h5 class="card-title forecast">25°</h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body forecast">
+            <p class="card-text forecast"><strong>15:00</strong></p>
+            <p class="card-text forecast">
+              <small class="text-muted">🌥</small>
+            </p>
+
+            <h5 class="card-title forecast">32°</h5>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body forecast">
+            <p class="card-text forecast"><strong>19:00</strong></p>
+            <p class="card-text forecast">
+              <small class="text-muted">🌙</small>
+            </p>
+            <h5 class="card-titel forecast">30°</h5>
+          </div>
+        </div>
+      </div>
+
+      <ul class="additionalInformation-box">
+        <li class="additionalInformation">
+          Precipitation: <span id="precipitation">0</span>% ☔️
+        </li>
+        <li class="additionalInformation">
+          Wind: <span id="wind"></span>km/h 💨
+        </li>
+        <li class="additionalInformation">
+          Humidity: <span id="humidity"></span>% 💦
+        </li>
+      </ul>
+      <footer>
+        coded by Carla Allenbach
+      </footer>
+    </div>
+  </div>
+  <script src="src/script.js"></script>
+</body>
+
 </html>
