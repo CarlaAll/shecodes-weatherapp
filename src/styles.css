@@ -1,8 +1,8 @@
 .container {
-  max-width: 450px;
+  max-width: 550px;
 }
 .weatherApp {
-  max-width: 450px;
+  max-width: 550px;
   border: solid 1px #dadde1;
   border-radius: 8px;
   padding: 20px 16px 24px;
@@ -33,9 +33,11 @@
 }
 
 .emoji-search {
-  font-size: 55px;
-  line-height: 0.5;
-  display: inline;
+  width: 100px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  vertical-align: bottom;
 }
 
 .temperatureNow {
@@ -52,6 +54,13 @@
   position: relative;
   top: -35px;
   font-size: 13px;
+}
+.unites .active {
+  color: black;
+  cursor: default;
+}
+.unites .active:hover {
+  text-decoration: none;
 }
 ul {
   margin: 0;
