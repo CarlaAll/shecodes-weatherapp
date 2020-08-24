@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>☀️ ☔️ 🌥</title>
+    <title>Carla's Weather App☔️</title>
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
@@ -60,7 +60,7 @@
           </div>
         </div>
         <div class="row temperature-row">
-          <div class="col-6">
+          <div class="col-7">
             <span
               ><img src=".." alt="weather icon" class="emoji-search" id="icon"
             /></span>
@@ -75,36 +75,19 @@
               <li class="temperatureNowInfoLocation" id="current-location"></li>
             </ul>
           </div>
-          <div class="col-6">
-            <img
-              src="images/takealong_sun.png"
-              alt="woman with sun glasses"
-              class="temperatureNowImage"
-            />
+          <div class="col-5">
+            <ul class="additionalInformation-box">
+              <li class="additionalInformation">
+                Wind: <span id="wind"></span>km/h 💨
+              </li>
+              <li class="additionalInformation">
+                Humidity: <span id="humidity"></span>% 💦
+              </li>
+            </ul>
           </div>
         </div>
 
-        <div class="row weekDaysOverview">
-          <div class="col-2 weekDays"><strong>today</strong></div>
-          <div class="col-2 weekDays" id="tomorrow"></div>
-          <div class="col-2 weekDays" id="after-tomorrow"></div>
-          <div class="col-2 weekDays" id="in-three"></div>
-          <div class="col-2 weekDays" id="in-four"></div>
-          <div class="col-2 weekDays" id="in-five"></div>
-        </div>
         <div class="row weather-forecast" id="forecast"></div>
-
-        <ul class="additionalInformation-box">
-          <li class="additionalInformation">
-            Precipitation: <span id="precipitation">0</span>% ☔️
-          </li>
-          <li class="additionalInformation">
-            Wind: <span id="wind"></span>km/h 💨
-          </li>
-          <li class="additionalInformation">
-            Humidity: <span id="humidity"></span>% 💦
-          </li>
-        </ul>
       </div>
       <small>
         <a
