@@ -81,7 +81,7 @@ let currentMonth = months[now.getMonth()];
 let currentYear = now.getFullYear();
 let dayNumber = now.getDate();
 let d1 = document.querySelector(".temperatureNowInfoDate");
-d1.innerHTML = `${currentDay},  ${currentMonth} ${dayNumber}, ${currentYear}.`;
+d1.innerHTML = `${currentDay},  ${currentMonth} ${dayNumber}, ${currentYear}`;
 
 let hours = now.getHours();
 if (hours < 10) {
