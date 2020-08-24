@@ -31,26 +31,22 @@ function formatHours(timestamp) {
 
 //forecast-card (ok?)
 function displayForecast(response) {
-  let forecastFirstElement = document.querySelector("#first-forecast");
-  forecastFirstElement.innerHTML = null;
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = null;
   let forecast = null;
   for (let index = 0; index < 3; index++) {
     forecast = response.data.list[index];
-    forecastFirstElement.innerHTML = `<div class="card">
-      <div class="card-body forecast">
-        <p class="card-text forecast"><strong>${formatHours(
-          forecast.dt * 1000
-        )}</strong></p>
-        <p class="card-text forecast">
-          <span class="text-muted"><img src="http://openweathermap.org/img/wn/${
-            forecast.weather[0].icon
-          }@2x.png" alt="forecast-icon"/></span>
-        </p>
-        <h5 class="card-title forecast" id="first-forecast">${Math.round(
+    forecastElement.innerHTML = `<div class="col-2">
+        <h3>
+        ${formatHours(forecast.dt * 1000)}
+        </h3>
+       <img src="http://openweathermap.org/img/wn/${
+         forecast.weather[0].icon
+       }@2x.png" alt="forecast icon" id="icon-forecast"/>
+        <div class="weather-forecast-temperature"><strong>${Math.round(
           forecast.main.temp_max
-        )}°</h5>
-      </div>
-    </div>`;
+        )}°</<strong>
+      </div></div>`;
   }
 }
 
@@ -78,36 +74,6 @@ function displayWeatherCondition(response) {
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
 }
-
-//forecast  menu 5days
-let daysshort = [
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-  "Fri",
-  "Sat",
-  "Sun",
-  "Mon",
-  "Tue",
-  "Wed",
-  "Thu",
-];
-let forecastTomorrow = document.querySelector("#tomorrow");
-forecastTomorrow.innerHTML = `${daysshort[now.getDay() + 1]}`;
-
-let forecastAfter = document.querySelector("#after-tomorrow");
-forecastAfter.innerHTML = `${daysshort[now.getDay() + 2]}`;
-
-let forecastThree = document.querySelector("#in-three");
-forecastThree.innerHTML = `${daysshort[now.getDay() + 3]}`;
-
-let forecastFour = document.querySelector("#in-four");
-forecastFour.innerHTML = `${daysshort[now.getDay() + 4]}`;
-
-let forecastFive = document.querySelector("#in-five");
-forecastFive.innerHTML = `${daysshort[now.getDay() + 5]}`;
 
 //search-function (ok)
 function search(city) {
@@ -158,10 +124,10 @@ function displayCelsiusTemperature(event) {
 let celciusTemperature = null;
 
 let form = document.querySelector("#btn-search");
-form.addEventListener("submit", handlesubmit);
+form.addEventListener("click", handlesubmit);
 
 let currentLocationButton = document.querySelector("#btn-location");
-currentLocationButton.addEventListener("submit", getCurrentLocation);
+currentLocationButton.addEventListener("click", getCurrentLocation);
 
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);

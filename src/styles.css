@@ -96,32 +96,21 @@ ul {
 .weekDays:hover {
   cursor: pointer;
 }
-.card-deck {
-  margin: 0 45px;
+
+#icon-forecast {
+  max-width: 45px;
+}
+h3 {
+  font-size: 14px;
+  text-align: center;
   padding: 0;
-  line-height: normal;
+  margin: 0;
 }
-
-.card-body {
-  padding: 10px;
-}
-
-.card {
-  background-color: transparent;
-  border: 2px solid #fdfbfb;
-  box-shadow: 5px 5px 5px 0px rgba(240, 240, 240, 1);
-}
-
-.card-text {
-  font-size: 12px;
+.weather-forecast-temperature {
   text-align: center;
+  padding: 0;
+  margin: 0;
 }
-.text-muted {
-  text-align: center;
-  margin: 0.5;
-  font-size: 20px;
-}
-
 h5 {
   text-align: center;
 }
