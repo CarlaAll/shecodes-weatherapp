@@ -43,7 +43,7 @@
               <button
                 type="button"
                 class="btn btn-primary w-200"
-                id="searching"
+                id="btn-search"
               >
                 Search
               </button>
@@ -71,8 +71,7 @@
             >
             <br />
             <ul>
-              <li class="temperatureNowInfoDate" , id="current-date"></li>
-              <li class="temperatureNowInfoTime" id="current-time"></li>
+              <li class="temperatureNowInfoDate" , id="date"></li>
               <li class="temperatureNowInfoLocation" id="current-location"></li>
             </ul>
           </div>
@@ -94,32 +93,13 @@
           <div class="col-2 weekDays" id="in-five"></div>
         </div>
         <div class="card-deck">
-          <div class="card">
+          <div class="card" id="first-forecast">
             <div class="card-body forecast">
               <p class="card-text forecast"><strong>11:00</strong></p>
               <p class="card-text forecast">
-                <small class="text-muted">☀️</small>
+                <span class="text-muted"><img src="#" alt=".." /></span>
               </p>
-              <h5 class="card-title forecast">25°</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body forecast">
-              <p class="card-text forecast"><strong>15:00</strong></p>
-              <p class="card-text forecast">
-                <small class="text-muted">🌥</small>
-              </p>
-
-              <h5 class="card-title forecast">32°</h5>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-body forecast">
-              <p class="card-text forecast"><strong>19:00</strong></p>
-              <p class="card-text forecast">
-                <small class="text-muted">🌙</small>
-              </p>
-              <h5 class="card-titel forecast">30°</h5>
+              <h5 class="card-title forecast" id="first-forecast">25°</h5>
             </div>
           </div>
         </div>
