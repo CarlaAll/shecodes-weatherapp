@@ -176,7 +176,7 @@ function displayCelsiusTemperature(event) {
 let celciusTemperature = null;
 
 let form = document.querySelector("#btn-search");
-form.addEventListener("click", handlesubmit);
+form.addEventListener("submit", handlesubmit);
 
 let currentLocationButton = document.querySelector("#btn-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
