@@ -50,7 +50,29 @@ function displayForecast(response) {
       </div></div>`;
   }
 }
-//take along function
+// background color temperature code
+function tempColoring(response) {
+  let temp = Math.round(response.data.main.temp);
+  if (temp > -30 && temp <= -15) {
+    temp = `linear-gradient(-225deg, #22e1ff 0%, #1d8fe1 48%, #625eb1 100%)`;
+  } else if (temp > -15 && temp < -7.5) {
+    temp = `linear-gradient(to top, #accbee 0%, #e7f0fd 100%)`;
+  } else if (temp >= -7.5 && temp <= 0) {
+    temp = `linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%)`;
+  } else if (temp > 0 && temp <= 7.5) {
+    temp = `linear-gradient(60deg, #abecd6 0%, #fbed96 100%)`;
+  } else if (temp > 7.5 && temp <= 15) {
+    temp = `linear-gradient(to top, #0fd850 0%, #f9f047 100%)`;
+  } else if (temp > 15 && temp <= 25) {
+    temp = `linear-gradient(to right, #f9d423 0%, #ff4e50 100%)`;
+  } else {
+    temp = `linear-gradient(to right, #f83600 0%, #f9d423 100%)`;
+  }
+
+  return temp;
+}
+
+//take along function (ok)
 function takeAlong(response) {
   let rememberItem = response.data.weather[0].main;
   if (rememberItem == "Rain") {
@@ -92,6 +114,7 @@ function displayWeatherCondition(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
+  document.querySelector("#app").style.backgroundImage = tempColoring(response);
 }
 
 //search-function (ok)
