@@ -50,12 +50,27 @@ function displayForecast(response) {
       </div></div>`;
   }
 }
-
+//take along function
+function takeAlong(response) {
+  let rememberItem = response.data.weather[0].main;
+  if (rememberItem == "Rain") {
+    rememberItem = ` your 🌂.  Stay dry.`;
+  } else if (rememberItem == "Clear") {
+    rememberItem = ` your  🕶.  Stay cool.`;
+  } else if (rememberItem == "Snow") {
+    rememberItem = ` your 🧣and 🧤. Stay healthy.`;
+  } else {
+    rememberItem = ` to be a feminist 💜`;
+  }
+  return `${rememberItem}`;
+}
 //temperature now (ok)
 function displayWeatherCondition(response) {
   celciusTemperature = response.data.main.temp;
 
-  document.querySelector("#current-location").innerHTML = response.data.name;
+  document.querySelector(
+    "#current-location"
+  ).innerHTML = `${response.data.name}, ${response.data.sys.country}`;
   document.querySelector("#temp").innerHTML = Math.round(celciusTemperature);
   document.querySelector("#description").innerHTML =
     response.data.weather[0].description;
@@ -63,6 +78,7 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
   );
+  document.querySelector("#take-along").innerHTML = takeAlong(response);
   document.querySelector("#date").innerHTML = formatDate(
     response.data.dt * 1000
   );
