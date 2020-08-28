@@ -76,13 +76,13 @@ function tempColoring(response) {
 function takeAlong(response) {
   let rememberItem = response.data.weather[0].main;
   if (rememberItem == "Rain") {
-    rememberItem = ` your 🌂.  Stay dry.`;
+    rememberItem = ` your umbrella🌂. `;
   } else if (rememberItem == "Clear") {
-    rememberItem = ` your  🕶.  Stay cool.`;
+    rememberItem = ` your  sunglasses.</br>🕶`;
   } else if (rememberItem == "Snow") {
-    rememberItem = ` your 🧣and 🧤. Stay healthy.`;
+    rememberItem = ` your scraf and gloves.</br>🧣🧤`;
   } else {
-    rememberItem = ` to be a feminist 💜`;
+    rememberItem = ` to be a feminist </br>💜`;
   }
   return `${rememberItem}`;
 }

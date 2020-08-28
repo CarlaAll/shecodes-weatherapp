@@ -1,6 +1,37 @@
+h3 {
+  font-size: 14px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+h4 {
+  font-weight: lighter;
+  margin-left: 3px;
+}
+
+h5 {
+  text-align: center;
+}
+
+ul {
+  margin: 0;
+  margin-left: 25px;
+  padding: 0;
+}
+
+small {
+  font-family: monospace;
+  font-size: 11px;
+  margin-bottom: 15px;
+  display: block;
+  text-align: center;
+}
+
 .container {
   max-width: 600px;
 }
+
 .weatherApp {
   max-width: 600px;
   border: solid 1px #dadde1;
@@ -9,6 +40,7 @@
   position: relative;
   display: block;
 }
+
 .form-row {
   margin-bottom: 15px;
   box-sizing: 40px;
@@ -18,9 +50,11 @@
 .input-group-prepend {
   height: 38px;
 }
+
 .fa-map-marker-alt {
   font-size: 15px;
 }
+
 .btn-primary {
   border-radius: 7px;
   font-size: 15px;
@@ -55,24 +89,32 @@
   top: -35px;
   font-size: 13px;
 }
+
 .unites .active {
   color: black;
   cursor: default;
 }
+
 .unites .active:hover {
   text-decoration: none;
 }
+
 .temperature-row {
   margin-bottom: 80px;
 }
-ul {
-  margin: 0;
-  margin-left: 25px;
+
+.temperatureNowInfoDate {
+  font-size: 20px;
+  font-weight: lighter;
+  opacity: 0.8px;
   padding: 0;
+  margin: 0;
+  list-style: none;
+  line-height: 1.25em;
+  color: black;
 }
-.temperatureNowInfoDate,
-.temperatureNowInfoTime,
-.temperatureNowInfoLocation {
+.temperatureNowInfoLocation,
+.temperatureNowInfoDescription {
   font-size: 15px;
   font-weight: lighter;
   opacity: 0.8px;
@@ -88,29 +130,12 @@ ul {
   background: transparent;
   margin: 0 auto;
 }
-#icon {
-}
 
-#icon-forecast {
-  max-width: 45px;
-  display: block;
-  margin: 0 auto;
-}
-
-h3 {
-  font-size: 14px;
-  text-align: center;
-  padding: 0;
-  margin: 0;
-}
 .weather-forecast-temperature {
   text-align: center;
   padding: 0;
   margin: 0;
   margin-bottom: 50px;
-}
-h5 {
-  text-align: center;
 }
 
 .additionalInformation-box {
@@ -123,79 +148,23 @@ h5 {
   font-weight: lighter;
 }
 
-small {
-  font-family: monospace;
-  font-size: 11px;
-  margin-bottom: 15px;
+#icon-forecast {
+  max-width: 45px;
   display: block;
+  margin: 0 auto;
+}
+
+#remember-box {
+  font-family: sans-serif;
+  font-size: 14px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
   text-align: center;
-}
-
-.iceCold {
-  background-image: linear-gradient(
-    -225deg,
-    #22e1ff 0%,
-    #1d8fe1 48%,
-    #625eb1 100%
-  );
-}
-
-.colder {
-  max-width: 600px;
-  border: solid 1px #dadde1;
+  margin-top: 10px;
+  margin-right: 45px;
+  border: 2px solid #48484a;
   border-radius: 8px;
-  padding: 20px 16px 24px;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%);
-}
-
-.cold {
-  max-width: 600px;
-  border: solid 1px #dadde1;
-  border-radius: 8px;
-  padding: 20px 16px 24px;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%);
-}
-
-.neutral {
-  max-width: 600px;
-  border: solid 1px #dadde1;
-  border-radius: 8px;
-  padding: 20px 16px 24px;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(60deg, #abecd6 0%, #fbed96 100%);
-}
-
-.warm {
-  max-width: 600px;
-  border: solid 1px #dadde1;
-  border-radius: 8px;
-  padding: 20px 16px 24px;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(to right, #f9d423 0%, #ff4e50 100%);
-}
-
-.hot {
-  max-width: 600px;
-  border: solid 1px #dadde1;
-  border-radius: 8px;
-  padding: 20px 16px 24px;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(to right, #fa709a 0%, #fee140 100%);
-}
-
-.hotter {
-  max-width: 600px;
-  border: solid 1px #dadde1;
-  border-radius: 8px;
-  padding: 20px 16px 24px;
-  position: relative;
-  display: block;
-  background-image: linear-gradient(to right, #f83600 0%, #f9d423 100%);
+  box-shadow: 8px 7px 5px 0 rgba(180, 227, 233, 0.42);
 }
