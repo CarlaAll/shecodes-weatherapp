@@ -57,6 +57,8 @@ function displayWeatherCondition(response) {
 
   document.querySelector("#current-location").innerHTML = response.data.name;
   document.querySelector("#temp").innerHTML = Math.round(celciusTemperature);
+  document.querySelector("#description").innerHTML =
+    response.data.weather[0].description;
   document.querySelector("#wind").innerHTML = response.data.wind.speed;
   document.querySelector("#humidity").innerHTML = Math.round(
     response.data.main.humidity
