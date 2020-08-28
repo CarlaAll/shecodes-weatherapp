@@ -7,7 +7,7 @@ h3 {
 
 h4 {
   font-weight: lighter;
-  margin-left: 3px;
+  margin-left: 10px;
 }
 
 h5 {
@@ -16,7 +16,7 @@ h5 {
 
 ul {
   margin: 0;
-  margin-left: 25px;
+  margin-left: 10px;
   padding: 0;
 }
 
@@ -29,16 +29,17 @@ small {
 }
 
 .container {
-  max-width: 600px;
+  max-width: 450px;
 }
 
 .weatherApp {
-  max-width: 600px;
+  max-width: 450px;
   border: solid 1px #dadde1;
   border-radius: 8px;
   padding: 20px 16px 24px;
   position: relative;
   display: block;
+  margin-top: 50px;
 }
 
 .form-row {
@@ -63,11 +64,11 @@ small {
 .btn-success {
   border-radius: 7px;
   font-size: 15px;
-  margin-left: 50px;
+  margin-left: 15px;
 }
 
 .emoji-search {
-  width: 100px;
+  width: 85px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -125,6 +126,10 @@ small {
   color: black;
 }
 
+.weather-forecast {
+  margin-top: 15px;
+  margin-left: 15px;
+}
 .temperatureNowImage {
   display: inline;
   background: transparent;
@@ -139,7 +144,7 @@ small {
 }
 
 .additionalInformation-box {
-  margin-top: 50px;
+  margin-top: 20px;
   text-align: left;
 }
 
@@ -163,7 +168,8 @@ small {
   padding-right: 5px;
   text-align: center;
   margin-top: 10px;
-  margin-right: 45px;
+  margin-left: -10px;
+  margin-right: 10px;
   border: 2px solid #48484a;
   border-radius: 8px;
   box-shadow: 8px 7px 5px 0 rgba(180, 227, 233, 0.42);

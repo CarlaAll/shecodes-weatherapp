@@ -35,7 +35,7 @@ function displayForecast(response) {
   forecastElement.innerHTML = null;
   let forecast = null;
 
-  for (let index = 0; index < 6; index++) {
+  for (let index = 0; index < 5; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `<div class="col-2">
         <h3>
@@ -46,27 +46,37 @@ function displayForecast(response) {
        }@2x.png" alt="forecast icon" id="icon-forecast"/>
         <div class="weather-forecast-temperature"><strong>${Math.round(
           forecast.main.temp_max
-        )}°</<strong>
+        )}°</strong>
       </div></div>`;
   }
 }
-// background color temperature code
+// background color temperature code (ok)
 function tempColoring(response) {
   let temp = Math.round(response.data.main.temp);
   if (temp > -30 && temp <= -15) {
-    temp = `linear-gradient(-225deg, #22e1ff 0%, #1d8fe1 48%, #625eb1 100%)`;
+    temp = `l#9DBCF9`;
   } else if (temp > -15 && temp < -7.5) {
-    temp = `linear-gradient(to top, #accbee 0%, #e7f0fd 100%)`;
+    temp = `#9ADEFA`;
   } else if (temp >= -7.5 && temp <= 0) {
-    temp = `linear-gradient(45deg, #93a5cf 0%, #e4efe9 100%)`;
-  } else if (temp > 0 && temp <= 7.5) {
-    temp = `linear-gradient(60deg, #abecd6 0%, #fbed96 100%)`;
-  } else if (temp > 7.5 && temp <= 15) {
-    temp = `linear-gradient(to top, #0fd850 0%, #f9f047 100%)`;
-  } else if (temp > 15 && temp <= 25) {
-    temp = `linear-gradient(to right, #f9d423 0%, #ff4e50 100%)`;
+    temp = `#99FBFC`;
+  } else if (temp > 0 && temp <= 5) {
+    temp = `#99F9DC`;
+  } else if (temp > 0 && temp <= 5) {
+    temp = `#99F9DC`;
+  } else if (temp > 5 && temp <= 8) {
+    temp = `#97F8BB`;
+  } else if (temp > 8 && temp <= 11) {
+    temp = `#B9F799`;
+  } else if (temp > 11 && temp <= 15) {
+    temp = `#FCFA9A`;
+  } else if (temp > 15 && temp <= 20) {
+    temp = `#F29798`;
+  } else if (temp > 20 && temp <= 25) {
+    temp = `#FBDC98`;
+  } else if (temp > 25 && temp <= 30) {
+    temp = `#F5B999`;
   } else {
-    temp = `linear-gradient(to right, #f83600 0%, #f9d423 100%)`;
+    temp = `#39322C`;
   }
 
   return temp;
@@ -114,7 +124,7 @@ function displayWeatherCondition(response) {
   document
     .querySelector("#icon")
     .setAttribute("alt", response.data.weather[0].description);
-  document.querySelector("#app").style.backgroundImage = tempColoring(response);
+  document.querySelector("#app").style.backgroundColor = tempColoring(response);
 }
 
 //search-function (ok)
