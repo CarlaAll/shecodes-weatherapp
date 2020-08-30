@@ -29,7 +29,7 @@ function formatHours(timestamp) {
   return `${hours}:${minutes}`;
 }
 
-//forecast-card (PROBLEM: loop does not work)
+//forecast-card (ok)
 function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
@@ -153,6 +153,9 @@ function searchLocation(position) {
   let units = "metric";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=${units}`;
+  axios.get(apiUrl).then(displayForecast);
 }
 
 //Fahrenheit

@@ -59,12 +59,13 @@ small {
 .btn-primary {
   border-radius: 7px;
   font-size: 15px;
+  margin-left: -5px;
 }
 
 .btn-success {
   border-radius: 7px;
   font-size: 15px;
-  margin-left: 15px;
+  margin-left: 45px;
 }
 
 .emoji-search {
