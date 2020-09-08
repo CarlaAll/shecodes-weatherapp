@@ -61,8 +61,6 @@ function tempColoring(response) {
     temp = `#99FBFC`;
   } else if (temp > 0 && temp <= 5) {
     temp = `#99F9DC`;
-  } else if (temp > 0 && temp <= 5) {
-    temp = `#99F9DC`;
   } else if (temp > 5 && temp <= 8) {
     temp = `#97F8BB`;
   } else if (temp > 8 && temp <= 11) {
